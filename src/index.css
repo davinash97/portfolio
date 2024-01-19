@@ -1,53 +1,60 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "Animations.css";
+@import "main.css";
 
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .w-screen {
-    width: 95vw;
-    width: 95dvw;
+  width: 95vw;
+  width: 95dvw;
 }
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    /* color-scheme: light dark; */
-    color: #ffe382;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color-scheme: light dark; */
+  color: #ffe382;
+  overflow-x: hidden;
 }
 
-main {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+.main {
+  width: 100%;
+  scale: 1 1;
+  background: url("../assets/nature-placebo.jpg");
+  background-size: contain;
+  background: url("../assets/nature-min.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: hideBG forwards linear;
+  animation-timeline: view();
+  animation-range-start: contain 20vh;
+  animation-range-end: contain 80vh;
 }
 
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-variant: small-caps;
-    background-color: #092635;
-    background: url("../assets/nature-placebo.jpg");
-    background-size: contain;
-    background: url("../assets/nature-min.jpg");
-    background-size: cover;
-    background-position: center;
+  width: 100vw;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  background-color: #092635;
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 span {
-    font-family: 'brushCursive', 'Courier New', Courier, monospace;
+  font-family: "brushCursive", "Courier New", Courier, monospace;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -69,22 +76,34 @@ span {
 } */
 
 @font-face {
-    font-family: "brushCursive";
-    src: url("../assets/fonts/Blackmud.otf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "brushCursive";
+  src: url("../assets/fonts/Blackmud.otf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../assets/fonts/Montserrat.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "NotoSans";
-    src: url("../assets/fonts/NotoSans-Italic.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NotoSans";
+  src: url("../assets/fonts/NotoSans-Italic.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  color: hsla(0, 0%, 87%, 0.4);
+  background-image: linear-gradient(270deg, #ff3a3a, #3fabf9);
+  background-size: 1% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  /* animation: scroll-reveal linear forwards; */
+  animation-timeline: view();
+  animation-range-start: contain 5vh;
+  animation-range-end: contain 30vh;
 }

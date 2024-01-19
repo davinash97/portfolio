@@ -1,0 +1,61 @@
+@keyframes rotateIt {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes getAttention {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes background-reveal {
+  to {
+    background-color: hsla(0, 0%, 0%, 0.8);
+  }
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes hideBG {
+  to {
+    filter: blur(10px);
+    scale: 0 0;
+  }
+}
+
+@keyframes loadingBar {
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes colorThis {
+  to {
+    filter: saturate(1) contrast(1);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,34 +1,29 @@
 .achievements {
-    height: 8vh;
-    height: 8dvh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    &:hover {
-        cursor: pointer;
-        outline: 1px dashed white;
-    }
-    -webkit-text-stroke: .2px #ffffff;
-    padding: 50px 25px;
-    gap: 5vw;
-    gap: 5dvw;
+  height: 8vh;
+  height: 8dvh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-text-stroke: 0.2px #ffffff;
+  padding: 50px 25px;
+  gap: 5vw;
+  gap: 5dvw;
+  animation: slideIn linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover 15vh;
+  animation-range-end: cover 30vh;
+  &:hover {
+    outline: 1px dashed white;
+  }
 }
 
 .achievements:nth-child(odd) {
-    margin-left: auto;
-    /* background: linear-gradient(
-        101deg,
-        rgba(189, 0, 255, 0.5) 0.4%,
-        rgba(0, 194, 255, 0.5) 100%
-    ); */
+  margin-left: auto;
+  transform: translateX(250px);
 }
 
 .achievements:nth-child(even) {
-    margin-right: auto;
-    /* background: linear-gradient(
-        101deg,
-        rgba(0, 194, 255, 0.5) 0.4%,
-        rgba(189, 0, 255, 0.5) 100%
-    ); */
+  margin-right: auto;
+  transform: translateX(-250px);
 }

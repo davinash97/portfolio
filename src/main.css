@@ -1,0 +1,30 @@
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: rotateIt infinite 20s linear;
+  }
+  #scroll {
+    animation: getAttention 3s infinite both ease-in-out;
+  }
+  .loading {
+    animation: loadingBar linear forwards;
+  }
+  p {
+    animation: background-reveal linear forwards, scroll-reveal linear forwards;
+  }
+}
+
+.loading {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: linear-gradient(45deg, #fb8b24, #52d3d8);
+  box-shadow: 5px 10px 10px #2d9596;
+  background-repeat: no-repeat;
+  height: 8px;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation-timeline: scroll();
+}

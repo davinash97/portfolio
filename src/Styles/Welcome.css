@@ -1,15 +1,4 @@
 #scroll {
     position: relative;
     bottom: 150px;
-    animation: getAttention 3s infinite both ease-in-out;
-}
-
-@keyframes getAttention {
-    0%,
-    100% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
 }

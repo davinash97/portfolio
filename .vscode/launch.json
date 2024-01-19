@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "NPM launch",
+            "request": "launch",
+            "type": "node",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ]
+        },
+        {
+            "name": "Open Browser",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:5173",
+            "runtimeArgs": [
+                "${url}",
+                "--new-window"
+            ],
+            "runtimeExecutable": "/usr/bin/thorium-browser",
+            "webRoot": "${workspaceFolder}"
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Launch Web App",
+            "configurations": [
+                "NPM launch",
+                "Open Browser"
+            ]
+        }
+    ]
+}

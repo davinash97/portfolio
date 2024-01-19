@@ -1,34 +1,49 @@
 .Others > div:hover img {
-    cursor: pointer;
-    filter: saturate(1) contrast(1);
+  cursor: pointer;
+  filter: saturate(1) contrast(1);
 }
 
 .Others > div > p {
-    cursor: pointer;
-    width: 20vw;
-    width: 20dvw;
+  cursor: pointer;
+  width: 20vw;
+  width: 20dvw;
 }
 
 .Others > div > img {
-    min-width: 25%;
+  min-width: 25%;
 }
 
 .Others > div > img:nth-child(1) {
-    min-width: 10%;
+  min-width: 10%;
+}
+
+.other-content:nth-child(odd) {
+  transform: translateX(-500px);
+}
+
+.other-content:nth-child(even) {
+  transform: translateX(500px);
+}
+
+.other-content {
+  animation: slideIn linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover 15vh;
+  animation-range-end: cover 30vh;
 }
 
 @media screen and (orientation: portrait) {
-    .Others > div {
-        min-width: 100%;
-        flex-direction: column;
-    }
+  .Others > div {
+    min-width: 100%;
+    flex-direction: column;
+  }
 
-    .Others > div > p {
-        width: auto;
-        padding: 10px;
-    }
+  .Others > div > p {
+    width: auto;
+    padding: 10px;
+  }
 
-    .Others > div > p:nth-child(1) {
-        order: 1;
-    }
+  .Others > div > p:nth-child(1) {
+    order: 1;
+  }
 }
