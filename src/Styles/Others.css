@@ -1,0 +1,34 @@
+.Others > div:hover img {
+    cursor: pointer;
+    filter: saturate(1) contrast(1);
+}
+
+.Others > div > p {
+    cursor: pointer;
+    width: 20vw;
+    width: 20dvw;
+}
+
+.Others > div > img {
+    min-width: 25%;
+}
+
+.Others > div > img:nth-child(1) {
+    min-width: 10%;
+}
+
+@media screen and (orientation: portrait) {
+    .Others > div {
+        min-width: 100%;
+        flex-direction: column;
+    }
+
+    .Others > div > p {
+        width: auto;
+        padding: 10px;
+    }
+
+    .Others > div > p:nth-child(1) {
+        order: 1;
+    }
+}

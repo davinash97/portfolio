@@ -1,0 +1,64 @@
+.projectFrame {
+    border-radius: 20px;
+    background: linear-gradient(
+        101deg,
+        rgba(189, 0, 255, 0.5) 0.4%,
+        rgba(0, 194, 255, 0.5) 100%
+    );
+}
+
+.projectFrame:nth-child(2) {
+    background: linear-gradient(
+        101deg,
+        rgba(0, 194, 255, 0.5) 0.4%,
+        rgba(189, 0, 255, 0.5) 100%
+    );
+}
+
+.projectFrame > div {
+    width: 40vw;
+    width: 40dvw;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    padding: 10px;
+}
+
+.projectFrame > div > img {
+    filter: saturate(1);
+    min-width: 25%;
+}
+
+p {
+    font-size: calc(50% + 1.5vh);
+    font-size: calc(50% + 1.5dvh);
+}
+
+@media screen and (orientation: portrait) {
+    .projectFrame > div > img {
+        width: calc(50% + 10vw);
+        width: calc(50% + 10dvw);
+    }
+    .projectFrame:nth-child(1) > div > p {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .projectFrame > div {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .projectFrame > div {
+        width: auto;
+        display: flex;
+        gap: 50px;
+        padding: 10px;
+    }
+}
