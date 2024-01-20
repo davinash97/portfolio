@@ -1,20 +1,20 @@
 input[type="text"],
 input[type="mail"],
 textarea {
-    min-width: 25vw;
-    min-width: 25dvw;
-    min-height: 8vh;
-    min-height: 8dvh;
-    color: black;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
+  min-width: 25vw;
+  min-width: 25dvw;
+  min-height: 8vh;
+  min-height: 8dvh;
+  color: black;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
 }
 
 form > div {
-    min-width: 25vw;
-    min-width: 25dvw;
+  min-width: 25vw;
+  min-width: 25dvw;
 }
 
 /* button {
@@ -33,16 +33,25 @@ form > div {
 } */
 
 @media screen and (orientation: portrait) {
-    input[type="text"],
-    input[type="mail"],
-    textarea {
-        width: 100%;
-    }
+  input[type="text"],
+  input[type="mail"],
+  textarea {
+    width: 100%;
+  }
 }
 
 .contacts > a > img {
-    transition-duration: 500ms;
-    &:hover {
-        filter: saturate(1) contrast(1);
-    }
+  transition-duration: 500ms;
+  &:hover {
+    transform: translateY(-10px);
+    filter: saturate(1) contrast(1);
+  }
+}
+
+.contacts > a {
+  transform: translateX(-50px);
+  animation: slideIn linear forwards;
+  animation-timeline: view();
+  animation-range-start: 0vh;
+  animation-range-end: 10vh;
 }

@@ -17,16 +17,9 @@
   min-width: 10%;
 }
 
-.other-content:nth-child(odd) {
-  transform: translateX(-500px);
-}
-
-.other-content:nth-child(even) {
-  transform: translateX(500px);
-}
-
 .other-content {
-  animation: slideIn linear forwards;
+  opacity: 0;
+  animation: fadeIn linear forwards;
   animation-timeline: view();
   animation-range-start: cover 15vh;
   animation-range-end: cover 30vh;

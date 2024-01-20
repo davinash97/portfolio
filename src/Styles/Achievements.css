@@ -9,10 +9,11 @@
   padding: 50px 25px;
   gap: 5vw;
   gap: 5dvw;
-  animation: slideIn linear forwards;
+  animation: fadeIn linear forwards;
   animation-timeline: view();
   animation-range-start: cover 15vh;
   animation-range-end: cover 30vh;
+  opacity: 0;
   &:hover {
     outline: 1px dashed white;
   }
@@ -20,10 +21,8 @@
 
 .achievements:nth-child(odd) {
   margin-left: auto;
-  transform: translateX(250px);
 }
 
 .achievements:nth-child(even) {
   margin-right: auto;
-  transform: translateX(-250px);
 }

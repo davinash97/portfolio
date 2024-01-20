@@ -7,13 +7,16 @@
   }
 }
 
-@keyframes getAttention {
+@keyframes hoverUp-Down {
   0%,
   100% {
     transform: translateY(-10px);
+    background-color: #80bcbd;
   }
   50% {
     transform: translateY(10px);
+    background-color: transparent;
+    opacity: 0;
   }
 }
 
@@ -29,10 +32,10 @@
   }
 }
 
-@keyframes hideBG {
+@keyframes fadeOut {
   to {
-    filter: blur(10px);
-    scale: 0 0;
+    opacity: 0;
+    filter: blur(50px);
   }
 }
 
@@ -45,6 +48,12 @@
 @keyframes colorThis {
   to {
     filter: saturate(1) contrast(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 
