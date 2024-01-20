@@ -23,19 +23,19 @@ span {
   border-bottom-right-radius: 20px;
   background-image: linear-gradient(45deg, #fb8b24, #52d3d8);
   box-shadow: 5px 10px 10px #2d9596;
-  background-repeat: no-repeat;
   height: 8px;
   width: 100%;
   scale: 0 1;
   transform-origin: left;
-  animation-timeline: scroll();
+  animation: progressBar linear forwards;
+  animation-timeline: scroll(y);
 }
 
 .main {
   opacity: 1;
   width: 100%;
   filter: blur(0);
-  background: url("../assets/nature-placebo.jpg");
+  background: url("../assets/nature-placeho.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   animation: fadeOut forwards linear;

@@ -39,7 +39,7 @@
   }
 }
 
-@keyframes loadingBar {
+@keyframes progressBar {
   to {
     scale: 1 1;
   }

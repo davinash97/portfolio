@@ -19,7 +19,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color-scheme: light dark;
-  color: #ffe382;
   overflow-x: hidden;
 }
 
@@ -82,8 +81,5 @@ body {
   }
   #scroll {
     animation: hoverUp-Down 3s infinite both ease-in-out;
-  }
-  .progress {
-    animation: loadingBar linear forwards;
   }
 }
