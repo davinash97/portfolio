@@ -1,20 +1,21 @@
 import "../Styles/Skills.css";
 
-import html from "../../assets/svg/html.svg";
-import css from "../../assets/svg/css.svg";
-import javascript from "../../assets/svg/javascript.svg";
-import php from "../../assets/svg/php.svg";
-import java from "../../assets/svg/java.svg";
-
-import git from "../../assets/svg/git.svg";
-import figma from "../../assets/svg/figma.svg";
-import github from "../../assets/svg/github.svg";
-import msoffice from "../../assets/svg/msoffice.svg";
-import code from "../../assets/svg/code.svg";
-import reactSVG from "../../assets/svg/react.svg";
-
-import win11 from "../../assets/svg/win11.svg";
-import arch from "../../assets/svg/arch.svg";
+import {
+  html,
+  css,
+  javascript,
+  php,
+  java,
+  git,
+  figma,
+  github,
+  msoffice,
+  code,
+  reactSVG,
+  tailwindSVG,
+  win11,
+  arch,
+} from "./ImgIndex.mjs";
 
 function skillsPage() {
   return (
@@ -78,6 +79,17 @@ function skillsPage() {
                 className="logo"
               />
               <div className="title">React JS</div>
+            </div>
+            <div className="frameBox gap-4 p-6">
+              <img
+                src={tailwindSVG}
+                alt="TailwindCSS"
+                draggable="false"
+                style={{
+                  width: "250px",
+                }}
+              />
+              <div className="title">Tailwind CSS</div>
             </div>
           </div>
         </div>

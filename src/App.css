@@ -34,11 +34,6 @@ p {
   font-size: calc(50% + 1.5dvh);
 }
 
-a span {
-  display: inline-block;
-  transition-duration: 1s;
-}
-
 a:hover span {
   transform: translateY(-5px);
   text-decoration: underline !important;

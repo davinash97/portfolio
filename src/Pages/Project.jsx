@@ -1,6 +1,5 @@
 import "../Styles/Project.css";
-import globalBuzz from "../../assets/png/globalBuzz.png";
-import passGen from "../../assets/png/passGen.png";
+import { globalBuzz, passGen } from "./ImgIndex.mjs";
 
 function Project() {
   return (

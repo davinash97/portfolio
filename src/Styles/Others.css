@@ -1,10 +1,8 @@
 .Others > div:hover img {
-  cursor: pointer;
   filter: saturate(1) contrast(1);
 }
 
 .Others > div > p {
-  cursor: pointer;
   width: 20vw;
   width: 20dvw;
 }
@@ -21,8 +19,8 @@
   opacity: 0;
   animation: fadeIn linear forwards;
   animation-timeline: view();
-  animation-range-start: cover 15vh;
-  animation-range-end: cover 30vh;
+  animation-range-start: cover 10vh;
+  animation-range-end: cover 12vh;
 }
 
 @media screen and (orientation: portrait) {

@@ -1,7 +1,5 @@
 import "../Styles/Contacts.css";
-import mail from "../../assets/svg/gmail.svg";
-import telegram from "../../assets/svg/telegram.svg";
-import linkedin from "../../assets/svg/linkedin.svg";
+import { mail, telegram, linkedin } from "./ImgIndex.mjs";
 
 function Contacts() {
   // document
@@ -11,7 +9,7 @@ function Contacts() {
   return (
     <section className="flex flex-col gap-10 py-10">
       <h2 className="text-center">Contacts</h2>
-      <div style={{ display: "none" }}>
+      {/*<div style={{ display: "none" }}>
         <form
           action="mailto:davinash97.work@gmail.com"
           method="post"
@@ -62,7 +60,7 @@ function Contacts() {
           </div>
         </form>
         <h4 className="text-center">OR</h4>
-      </div>
+      </div> */}
       <div className="flex gap-10 justify-around contacts">
         <a
           href="mailto:davinash97.work@gmail.com"

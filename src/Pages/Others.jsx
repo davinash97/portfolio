@@ -1,7 +1,6 @@
 import "../Styles/Others.css";
-import samsung from "../../assets/svg/samsung.svg";
-import android from "../../assets/svg/android.svg";
-import robot from "../../assets/svg/robot.svg";
+
+import { samsung, android, robot } from "./ImgIndex.mjs";
 
 function Others() {
   return (
