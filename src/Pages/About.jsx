@@ -6,12 +6,13 @@ function AboutPage() {
       <h2 className="text-4xl">About me</h2>
       <div className="about-container">
         <p className="text-lg text-justify max-w-3xl px-5 about">
-          Hello, I&#39;m <span>Avinash!</span> A Senior-Year{" "}
-          <span>Student</span> pursuing a Bachelor&#39;s in Computer Science
-          Engineering at RSR Rungta College of Engineering & Technology, Bhilai,
-          Chhattisgarh -<span> India</span>. Passionate about tech, I bring a
-          strong academic foundation and practical project experience to the
-          table. Explore my portfolio for more. Thank you!
+          Hello, I&#39;m <span className="highlight">Avinash!</span> A
+          Senior-Year <span className="highlight">Student</span> pursuing a
+          Bachelor&#39;s in Computer Science Engineering at RSR Rungta College
+          of Engineering & Technology, Bhilai, Chhattisgarh -
+          <span className="highlight"> India</span>. Passionate about tech, I
+          bring a strong academic foundation and practical project experience to
+          the table. Explore my portfolio for more. Thank you!
         </p>
       </div>
     </section>

@@ -14,7 +14,9 @@ function Project() {
             <p>
               A{" "}
               <a href="https://davinash97.github.io/globalbuzz" target="_blank">
-                <span>&#39;Dynamic Web application&#39;</span>
+                <span className="highlight">
+                  &#39;Dynamic Web application&#39;
+                </span>
               </a>{" "}
               for News. Frontend written in JavaScript with (HTML & CSS) and
               Backend is written solely on PHP. Powered by NewsAPI.
@@ -32,7 +34,7 @@ function Project() {
             <p>
               A{" "}
               <a href="https://davinash97.github.io/pass-gen" target="_blank">
-                <span>&#39;Web application&#39;</span>
+                <span className="highlight">&#39;Web application&#39;</span>
               </a>{" "}
               to generate a String containing various data type(s) (int, char or
               normal Uppercase/Lowercase) with data preference. Written in

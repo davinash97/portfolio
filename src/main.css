@@ -11,7 +11,7 @@ p {
   animation-range-end: contain 30vh;
 }
 
-span {
+.highlight {
   font-family: "brushCursive", "Courier New", Courier, monospace;
 }
 
