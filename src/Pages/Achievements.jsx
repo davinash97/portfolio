@@ -8,7 +8,7 @@ export default () => {
       <Card title="PHP" text="Completed Vocational Training" />
       <Card title="Java" text="Scored 71% in NPTEL " />
       <Card title="MS-Office" text="Completed Vocational Training" />
-      <Card title="Leetcode:" text="Solved 20+ Questions" />
+      <Card title=":Leetcode" text="Solved 20+ Questions" />
       <Card title="CodeChef:" text="Solved 50+ Questions" />
     </section>
   );

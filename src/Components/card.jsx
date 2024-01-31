@@ -14,7 +14,7 @@ const othersCard = (props) => {
       <img src={props.imgSrc} alt={props.title} draggable="false" />
       <p>
         <Highlight text={props.title} />
-        {props.paragraph}.
+        {props.paragraph}
       </p>
     </div>
   );

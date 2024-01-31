@@ -4,7 +4,7 @@ import { getImageUrl } from "./ImgIndex.jsx";
 import { othersCard as Card } from "../Components/card.jsx";
 
 export default () => {
-  const AndroidKernel = "Maintained kernel for Samsung Exynox 7870 (Used to).";
+  const AndroidKernel = "Maintained kernel for Samsung Exynos 7870 (Used to).";
   const AndroidROMs =
     "Contributed in some Custom ROMs for Samsung Exynos 7870 (Used to).";
   const TelegramBot =
