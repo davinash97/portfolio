@@ -10,6 +10,9 @@
   align-items: center;
   padding: 10px;
 }
+.projectFrame:nth-child(2) > div > p {
+  order: 1;
+}
 
 .projectFrame > div > img {
   filter: saturate(1);
@@ -29,7 +32,7 @@
     width: calc(50% + 10vw);
     width: calc(50% + 10dvw);
   }
-  .projectFrame:nth-child(1) > div > p {
+  .projectFrame > div > p {
     order: 1;
   }
 }

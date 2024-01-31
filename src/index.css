@@ -22,14 +22,6 @@
   overflow-x: hidden;
 }
 
-body {
-  width: 100vw;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-variant: small-caps;
-  position: absolute;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: hsl(225, 79%, 19%);

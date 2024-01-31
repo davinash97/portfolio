@@ -1,7 +1,9 @@
 import "../Styles/Contacts.css";
-import { mail, telegram, linkedin } from "./ImgIndex.mjs";
+import { Contacts } from "./ImgIndex.jsx";
 
-function Contacts() {
+import { contactsCard as Card } from "../Components/card.jsx";
+
+export default () => {
   // document
   //     .querySelectorAll("input")
   //     .forEach((input) => input.setAttribute("disabled", true));
@@ -62,31 +64,23 @@ function Contacts() {
         <h4 className="text-center">OR</h4>
       </div> */}
       <div className="flex gap-10 justify-around contacts">
-        <a
-          href="mailto:davinash97.work@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={mail} alt="Gmail" draggable="false" />
-        </a>
-        <a
-          href="https://t.me/davinash1997"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ borderRadius: "50%" }}
-        >
-          <img src={telegram} alt="Telegram" draggable="false" />
-        </a>
-        <a
-          href="https://linkedin.com/in/davinash97"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={linkedin} alt="LinkedIn" draggable="false" />
-        </a>
+        <Card
+          title="Gmail"
+          link="mailto:davinash97.work@gmail.com"
+          imgSrc={Contacts.mail}
+        />
+        <Card
+          title="Telegram"
+          link="https://t.me/davinash1997"
+          imgSrc={Contacts.telegram}
+        />
+
+        <Card
+          title="Telegram"
+          link="https://linkedin.com/in/davinash97"
+          imgSrc={Contacts.linkedin}
+        />
       </div>
     </section>
   );
-}
-
-export default Contacts;
+};

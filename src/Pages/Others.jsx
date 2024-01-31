@@ -1,38 +1,35 @@
 import "../Styles/Others.css";
+import { Other } from "./ImgIndex.jsx";
 
-import { samsung, android, robot } from "./ImgIndex.mjs";
+import { othersCard as Card } from "../Components/card.jsx";
 
-function Others() {
+export default () => {
+  const AndroidKernel = "Maintained kernel for Samsung Exynox 7870 (Used to).";
+  const AndroidROMs =
+    "Contributed in some Custom ROMs for Samsung Exynos 7870 (Used to).";
+  const TelegramBot =
+    "Contributed to some Open-Source Telegram bots written using Python-Telegram-bot library.";
   return (
     <section
       className="Others flex flex-col gap-12 px-10 justify-between items-center"
       style={{ minWidth: "50vw" }}
     >
       <h2 className="text-center">Others:</h2>
-      <div className="other-content flex items-center gap-10">
-        <img src={samsung} alt="Samsung Exynos" draggable="false" />
-        <p>
-          <span className="highlight">Android Kernel: &#127;</span>
-          Maintained kernel for Samsung Exynox 7870 (Used to).
-        </p>
-      </div>
-      <div className="other-content flex items-center gap-10">
-        <p>
-          <span className="highlight">Android ROMs: &#127;</span>
-          Contributed in some Custom ROMs for Samsung Exynos 7870 (Used to).
-        </p>
-        <img src={android} alt="Android" draggable="false" />
-      </div>
-      <div className="other-content flex items-center gap-10">
-        <img src={robot} alt="Robot" draggable="false" />
-        <p>
-          <span className="highlight">Telegram Bot(s): &#127;</span>
-          Contributed to some Open-Source Telegram bots written using
-          Python-Telegram-bot library.
-        </p>
-      </div>
+      <Card
+        title="Android Kernel:"
+        paragraph={" " + AndroidKernel}
+        imgSrc={Other.samsung}
+      />
+      <Card
+        title="Android ROMs:"
+        paragraph={" " + AndroidROMs}
+        imgSrc={Other.android}
+      />
+      <Card
+        title="Telegram Bots:"
+        paragraph={" " + AndroidKernel}
+        imgSrc={Other.robot}
+      />
     </section>
   );
-}
-
-export default Others;
+};

@@ -1,26 +1,15 @@
 import "../Styles/Achievements.css";
+import { achievementsCard as Card } from "../Components/card";
 
-function Achievements() {
+export default () => {
   return (
     <section className="flex flex-col py-20 justify-between gap-10 px-10 text-center w-screen">
       <h2>Achievements</h2>
-      <div className="achievements">
-        <h3>PHP</h3> Completed Vocational Training
-      </div>
-      <div className="achievements">
-        Scored 71% in NPTEL <h3>Java</h3>
-      </div>
-      <div className="achievements">
-        <h3>MS-Office:</h3> Completed Vocational Training
-      </div>
-      <div className="achievements">
-        Solved 20+ Questions <h3>Leetcode</h3>
-      </div>
-      <div className="achievements">
-        <h3>CodeChef:</h3> Solved 50+ Questions
-      </div>
+      <Card title="PHP" text="Completed Vocational Training" />
+      <Card title="Java" text="Scored 71% in NPTEL " />
+      <Card title="MS-Office" text="Completed Vocational Training" />
+      <Card title="Leetcode:" text="Solved 20+ Questions" />
+      <Card title="CodeChef:" text="Solved 50+ Questions" />
     </section>
   );
-}
-
-export default Achievements;
+};

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../Styles/Welcome.css";
 
-function Welcome() {
+export default () => {
   useEffect(() => {
     const handleScroll = () => {
       const opacityValue = window.scrollY >= 25 ? 0 : 1;
@@ -38,6 +38,4 @@ function Welcome() {
       </div>
     </section>
   );
-}
-
-export default Welcome;
+};

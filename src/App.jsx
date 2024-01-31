@@ -7,7 +7,7 @@ import Achievements from "./Pages/Achievements.jsx";
 import Other from "./Pages/Others.jsx";
 import Contacts from "./Pages/Contacts.jsx";
 
-function App() {
+export default () => {
   return (
     <>
       <div className="progress" />
@@ -24,6 +24,4 @@ function App() {
       </main>
     </>
   );
-}
-
-export default App;
+};

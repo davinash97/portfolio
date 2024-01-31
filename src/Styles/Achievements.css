@@ -26,3 +26,7 @@
 .achievements:nth-child(even) {
   margin-right: auto;
 }
+
+.achievements:nth-child(odd) > h3 {
+  order: 1;
+}

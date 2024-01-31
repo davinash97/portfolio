@@ -1,23 +1,7 @@
-import "../Styles/Skills.css";
+import { Languages, Tools, OperatingSystems } from "./ImgIndex.jsx";
+import { frame as Frame, osFrame as OS } from "../Components/frame.jsx";
 
-import {
-  html,
-  css,
-  javascript,
-  php,
-  java,
-  git,
-  figma,
-  github,
-  msoffice,
-  code,
-  reactSVG,
-  tailwindSVG,
-  win11,
-  arch,
-} from "./ImgIndex.mjs";
-
-function skillsPage() {
+export default () => {
   return (
     <section className="flex flex-col gap-5">
       <h2 className="text-center py-10">Skills</h2>
@@ -26,94 +10,47 @@ function skillsPage() {
           <h3 className="text-center">Languages</h3>
           <div className="text-center py-10">(I am comfortable with)</div>
           <div className="w-screen px-10 flex flex-col justify-between gap-10">
-            <div className="frameBox">
-              <img src={html} alt="HTML" draggable="false" />
-              <div className="title">HTML</div>
-            </div>
-            <div className="frameBox">
-              <img src={css} alt="CSS" draggable="false" />
-              <div className="title">CSS</div>
-            </div>
-            <div className="frameBox">
-              <img src={javascript} alt="JavaScript" draggable="false" />
-              <div className="title">JavaScript</div>
-            </div>
-            <div className="frameBox">
-              <img src={php} alt="PHP" draggable="false" />
-              <div className="title">PHP</div>
-            </div>
-            <div className="frameBox">
-              <img src={java} alt="Java" draggable="false" />
-              <div className="title">Java</div>
-            </div>
+            <Frame imgSrc={Languages.html} title="HTML" />
+            <Frame imgSrc={Languages.css} title="CSS" />
+            <Frame imgSrc={Languages.javascript} title="JavaScript" />
+            <Frame imgSrc={Languages.php} title="PHP" />
+            <Frame imgSrc={Languages.java} title="Java" />
           </div>
         </div>
         <div>
           <h3 className="text-center py-20">Tools:</h3>
           <div className="w-screen px-10 flex flex-col justify-between gap-10">
-            <div className="frameBox">
-              <img src={git} alt="Git" draggable="false" />
-              <div className="title">Git</div>
-            </div>
-            <div className="frameBox">
-              <img src={figma} alt="Figma" draggable="false" />
-              <div className="title">Figma</div>
-            </div>
-            <div className="frameBox">
-              <img src={github} alt="GitHub" draggable="false" />
-              <div className="title">GitHub</div>
-            </div>
-            <div className="frameBox">
-              <img src={msoffice} alt="MS-Office" draggable="false" />
-              <div className="title">MS-Office</div>
-            </div>
-            <div className="frameBox">
-              <img src={code} alt="VisualStudioCode" draggable="false" />
-              <div className="title">Visual Studio Code</div>
-            </div>
-            <div className="frameBox" style={{ padding: "35px", gap: "10px" }}>
-              <img
-                src={reactSVG}
-                alt="React"
-                draggable="false"
-                className="logo"
-              />
-              <div className="title">React JS</div>
-            </div>
-            <div className="frameBox gap-4 p-6">
-              <img
-                src={tailwindSVG}
-                alt="TailwindCSS"
-                draggable="false"
-                style={{
-                  width: "250px",
-                }}
-              />
-              <div className="title">Tailwind CSS</div>
-            </div>
+            <Frame imgSrc={Tools.git} title="Git" />
+            <Frame imgSrc={Tools.figma} title="figma" />
+            <Frame imgSrc={Tools.github} title="github" />
+            <Frame
+              imgSrc={Tools.msoffice}
+              title="MS-Office"
+              childStyle={{ padding: "20px" }}
+            />
+            <Frame imgSrc={Tools.code} title="Visual Studio Code" />
+            <Frame
+              imgSrc={Tools.reactSVG}
+              title="React JS"
+              parentStyle={{ padding: "35px", gap: "10px" }}
+              class="logo"
+            />
+            <Frame
+              imgSrc={Tools.tailwindSVG}
+              title="Tailwind CSS"
+              childStyle={{ width: "250px" }}
+              parentStyle={{ gap: "10px", padding: "30px" }}
+            />
           </div>
         </div>
         <div className="flex flex-col justify-between gap-10 py-20">
           <h3 className="text-center">Operating System:</h3>
-          <div className="w-screen px-20 flex flex-col justify-between gap-10">
-            <div className="OsContainer">
-              <div className="title">Windows</div>
-              <img
-                style={{ minWidth: "15%" }}
-                src={win11}
-                alt="Windows"
-                draggable="false"
-              />
-            </div>
-            <div className="OsContainer">
-              <img src={arch} alt="Linux" draggable="false" />
-              <div className="title">Linux</div>
-            </div>
+          <div className="w-screen px-10 flex flex-col justify-between gap-10">
+            <OS title="Windows" link={OperatingSystems.win11} />
+            <OS title="Linux" link={OperatingSystems.arch} />
           </div>
         </div>
       </div>
     </section>
   );
-}
-
-export default skillsPage;
+};

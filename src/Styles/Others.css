@@ -23,6 +23,10 @@
   animation-range-end: cover 12vh;
 }
 
+.other-content:nth-child(3) > img {
+  order: 1;
+}
+
 @media screen and (orientation: portrait) {
   .Others > div {
     min-width: 100%;
@@ -36,5 +40,8 @@
 
   .Others > div > p:nth-child(1) {
     order: 1;
+  }
+  .other-content:nth-child(3) > img {
+    order: 0;
   }
 }
