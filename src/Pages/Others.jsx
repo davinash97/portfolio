@@ -1,5 +1,5 @@
 import "../Styles/Others.css";
-import { Other } from "./ImgIndex.jsx";
+import { getImageUrl } from "./ImgIndex.jsx";
 
 import { othersCard as Card } from "../Components/card.jsx";
 
@@ -18,17 +18,17 @@ export default () => {
       <Card
         title="Android Kernel:"
         paragraph={" " + AndroidKernel}
-        imgSrc={Other.samsung}
+        imgSrc={getImageUrl("samsung")}
       />
       <Card
         title="Android ROMs:"
         paragraph={" " + AndroidROMs}
-        imgSrc={Other.android}
+        imgSrc={getImageUrl("android")}
       />
       <Card
         title="Telegram Bots:"
         paragraph={" " + AndroidKernel}
-        imgSrc={Other.robot}
+        imgSrc={getImageUrl("robot")}
       />
     </section>
   );

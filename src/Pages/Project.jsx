@@ -1,6 +1,6 @@
 import "../Styles/Project.css";
 import { projectFrame as ProjectFrame } from "../Components/frame.jsx";
-import { Projects } from "./ImgIndex.jsx";
+import { getImageUrl } from "./ImgIndex.jsx";
 
 export default () => {
   const GlobalBuzz =
@@ -15,13 +15,13 @@ export default () => {
         <ProjectFrame
           title="Global Buzz"
           link="https://davinash97.github.io/globalbuzz"
-          imgSrc={Projects.globalBuzz}
+          imgSrc={getImageUrl("globalBuzz", "webp")}
           paragraph={GlobalBuzz}
         />
 
         <ProjectFrame
           title="Password Generator"
-          imgSrc={Projects.passGen}
+          imgSrc={getImageUrl("passGen", "webp")}
           link="https://davinash97.github.io/pass-gen"
           paragraph={PasswordGenerator}
         />

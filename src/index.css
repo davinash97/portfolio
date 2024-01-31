@@ -48,21 +48,21 @@
 
 @font-face {
   font-family: "brushCursive";
-  src: url("../assets/fonts/Blackmud.otf");
+  src: url("assets/fonts/Blackmud.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat.ttf");
+  src: url("assets/fonts/Montserrat.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "NotoSans";
-  src: url("../assets/fonts/NotoSans-Italic.ttf");
+  src: url("assets/fonts/NotoSans-Italic.ttf");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,5 +1,5 @@
 import "../Styles/Contacts.css";
-import { Contacts } from "./ImgIndex.jsx";
+import { getImageUrl } from "./ImgIndex.jsx";
 
 import { contactsCard as Card } from "../Components/card.jsx";
 
@@ -67,18 +67,18 @@ export default () => {
         <Card
           title="Gmail"
           link="mailto:davinash97.work@gmail.com"
-          imgSrc={Contacts.mail}
+          imgSrc={getImageUrl("gmail")}
         />
         <Card
           title="Telegram"
           link="https://t.me/davinash1997"
-          imgSrc={Contacts.telegram}
+          imgSrc={getImageUrl("telegram")}
         />
 
         <Card
           title="Telegram"
           link="https://linkedin.com/in/davinash97"
-          imgSrc={Contacts.linkedin}
+          imgSrc={getImageUrl("linkedin")}
         />
       </div>
     </section>

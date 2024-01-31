@@ -1,5 +1,6 @@
-import { Languages, Tools, OperatingSystems } from "./ImgIndex.jsx";
 import { frame as Frame, osFrame as OS } from "../Components/frame.jsx";
+
+import { getImageUrl } from "./ImgIndex.jsx";
 
 export default () => {
   return (
@@ -10,33 +11,33 @@ export default () => {
           <h3 className="text-center">Languages</h3>
           <div className="text-center py-10">(I am comfortable with)</div>
           <div className="w-screen px-10 flex flex-col justify-between gap-10">
-            <Frame imgSrc={Languages.html} title="HTML" />
-            <Frame imgSrc={Languages.css} title="CSS" />
-            <Frame imgSrc={Languages.javascript} title="JavaScript" />
-            <Frame imgSrc={Languages.php} title="PHP" />
-            <Frame imgSrc={Languages.java} title="Java" />
+            <Frame imgSrc={getImageUrl("html")} title="HTML" />
+            <Frame imgSrc={getImageUrl("css")} title="CSS" />
+            <Frame imgSrc={getImageUrl("javascript")} title="JavaScript" />
+            <Frame imgSrc={getImageUrl("php")} title="PHP" />
+            <Frame imgSrc={getImageUrl("java")} title="Java" />
           </div>
         </div>
         <div>
           <h3 className="text-center py-20">Tools:</h3>
           <div className="w-screen px-10 flex flex-col justify-between gap-10">
-            <Frame imgSrc={Tools.git} title="Git" />
-            <Frame imgSrc={Tools.figma} title="figma" />
-            <Frame imgSrc={Tools.github} title="github" />
+            <Frame imgSrc={getImageUrl("git")} title="Git" />
+            <Frame imgSrc={getImageUrl("figma")} title="figma" />
+            <Frame imgSrc={getImageUrl("github")} title="github" />
             <Frame
-              imgSrc={Tools.msoffice}
+              imgSrc={getImageUrl("msoffice")}
               title="MS-Office"
               childStyle={{ padding: "20px" }}
             />
-            <Frame imgSrc={Tools.code} title="Visual Studio Code" />
+            <Frame imgSrc={getImageUrl("code")} title="Visual Studio Code" />
             <Frame
-              imgSrc={Tools.reactSVG}
+              imgSrc={getImageUrl("react")}
               title="React JS"
               parentStyle={{ padding: "35px", gap: "10px" }}
               class="logo"
             />
             <Frame
-              imgSrc={Tools.tailwindSVG}
+              imgSrc={getImageUrl("tailwindcss")}
               title="Tailwind CSS"
               childStyle={{ width: "250px" }}
               parentStyle={{ gap: "10px", padding: "30px" }}
@@ -46,8 +47,8 @@ export default () => {
         <div className="flex flex-col justify-between gap-10 py-20">
           <h3 className="text-center">Operating System:</h3>
           <div className="w-screen px-10 flex flex-col justify-between gap-10">
-            <OS title="Windows" link={OperatingSystems.win11} />
-            <OS title="Linux" link={OperatingSystems.arch} />
+            <OS title="Windows" link={getImageUrl("win11")} />
+            <OS title="Linux" link={getImageUrl("arch")} />
           </div>
         </div>
       </div>
