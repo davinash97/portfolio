@@ -1,4 +1,5 @@
 import Highlight from "./highlight";
+import React from "react";
 
 const achievementsCard = (props) => {
   return (

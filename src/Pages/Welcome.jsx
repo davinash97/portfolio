@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { React, useEffect } from "react";
 import "../Styles/Welcome.css";
 
-export default () => {
+export default function Welcome() {
   useEffect(() => {
     const handleScroll = () => {
       const opacityValue = window.scrollY >= 25 ? 0 : 1;
@@ -20,7 +20,6 @@ export default () => {
       <h1
         style={{
           height: "100vh",
-          height: "100svh",
         }}
         id="welcome"
         className="text-6xl flex flex-col text-center items-center justify-center"
@@ -38,4 +37,4 @@ export default () => {
       </div>
     </section>
   );
-};
+}

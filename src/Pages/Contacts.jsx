@@ -1,9 +1,9 @@
 import "../Styles/Contacts.css";
-import { getImageUrl } from "./ImgIndex.jsx";
-
+import { getImageUrl } from "../utils/ImgIndex.jsx";
+import React from "react";
 import { contactsCard as Card } from "../Components/card.jsx";
 
-export default () => {
+export default function Contacts() {
   // document
   //     .querySelectorAll("input")
   //     .forEach((input) => input.setAttribute("disabled", true));
@@ -83,4 +83,4 @@ export default () => {
       </div>
     </section>
   );
-};
+}

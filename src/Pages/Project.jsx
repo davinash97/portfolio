@@ -1,8 +1,9 @@
 import "../Styles/Project.css";
 import { projectFrame as ProjectFrame } from "../Components/frame.jsx";
-import { getImageUrl } from "./ImgIndex.jsx";
+import { getImageUrl } from "../utils/ImgIndex.jsx";
+import React from "react";
 
-export default () => {
+export default function Project() {
   const GlobalBuzz =
     "A Dynamic Web application for News. Frontend written in JavaScript with (HTML & CSS) and Backend is written solely on PHP. Powered by NewsAPI.";
 
@@ -28,4 +29,4 @@ export default () => {
       </div>
     </section>
   );
-};
+}

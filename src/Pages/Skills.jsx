@@ -1,8 +1,8 @@
+import React from "react";
 import { frame as Frame, osFrame as OS } from "../Components/frame.jsx";
+import { getImageUrl } from "../utils/ImgIndex.jsx";
 
-import { getImageUrl } from "./ImgIndex.jsx";
-
-export default () => {
+export default function Skills() {
   return (
     <section className="flex flex-col gap-5">
       <h2 className="text-center py-10">Skills</h2>
@@ -54,4 +54,4 @@ export default () => {
       </div>
     </section>
   );
-};
+}

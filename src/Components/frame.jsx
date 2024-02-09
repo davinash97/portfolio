@@ -1,4 +1,5 @@
 import "../Styles/Skills.css";
+import React from "react";
 
 const frame = (props) => {
   return (
@@ -23,7 +24,7 @@ const projectFrame = (props) => {
       </h3>
       <div className="flex flex-row content-center justify-center w-auto gap-5">
         <p>{props.paragraph}</p>
-        <a href={props.link} target="_blank">
+        <a href={props.link} target="_blank" rel="noreferrer">
           <img src={props.imgSrc} alt={props.title} draggable="false" />
         </a>
       </div>

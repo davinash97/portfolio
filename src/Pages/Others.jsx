@@ -1,9 +1,9 @@
 import "../Styles/Others.css";
-import { getImageUrl } from "./ImgIndex.jsx";
-
+import { getImageUrl } from "../utils/ImgIndex.jsx";
+import React from "react";
 import { othersCard as Card } from "../Components/card.jsx";
 
-export default () => {
+export default function Others() {
   const AndroidKernel = "Maintained kernel for Samsung Exynos 7870 (Used to).";
   const AndroidROMs =
     "Contributed in some Custom ROMs for Samsung Exynos 7870 (Used to).";
@@ -27,9 +27,9 @@ export default () => {
       />
       <Card
         title="Telegram Bots:"
-        paragraph={" " + AndroidKernel}
+        paragraph={" " + TelegramBot}
         imgSrc={getImageUrl("robot")}
       />
     </section>
   );
-};
+}
