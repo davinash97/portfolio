@@ -1,16 +1,13 @@
 h1 {
   font-size: calc(100% + 6vh) !important;
-  font-size: calc(100% + 6dvh) !important;
 }
 
 h2 {
   font-size: calc(25% + 4vh) !important;
-  font-size: calc(25% + 4dvh) !important;
 }
 
 h3 {
   font-size: calc(50% + 3vh) !important;
-  font-size: calc(50% + 3dvh) !important;
 }
 
 h4 {

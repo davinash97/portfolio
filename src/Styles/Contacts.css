@@ -1,36 +1,31 @@
 input[type="text"],
 input[type="mail"],
 textarea {
-  min-width: 25vw;
-  min-width: 25dvw;
+  min-width: 100%;
   min-height: 8vh;
-  min-height: 8dvh;
   color: black;
   outline: none;
   border: none;
   border-radius: 10px;
   text-align: center;
+  background-color: hsla(0, 0%, 39%, 0.13);
 }
 
 form > div {
   min-width: 25vw;
-  min-width: 25dvw;
 }
 
-/* button {
-
-    border-radius: 10px;
-    padding: 10px 20px !important;
-    background: transparent;
-    display: none;
-    outline: 1px solid white;
-    transition-duration: 250ms;
-    &:hover {
-        color: black;
-        background-color: #2d9596;
-        box-shadow: 0 0 50px #2d9596;
-    }
-} */
+button {
+  border-radius: 10px;
+  padding: 10px 20px !important;
+  outline: 1px solid black;
+  transition-duration: 250ms;
+  &:hover {
+    color: white;
+    background-color: #2d9596;
+    box-shadow: 0 0 50px #2d9596;
+  }
+}
 
 @media screen and (orientation: portrait) {
   input[type="text"],

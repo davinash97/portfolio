@@ -9,13 +9,13 @@ export default function Contacts() {
   //     .forEach((input) => input.setAttribute("disabled", true));
 
   return (
-    <section className="flex flex-col gap-10 py-10">
+    <section className="flex flex-col py-10 items-center gap-10">
       <h2 className="text-center">Contacts</h2>
-      {/*<div style={{ display: "none" }}>
+      <div>
         <form
           action="mailto:davinash97.work@gmail.com"
           method="post"
-          className="flex flex-col gap-5"
+          className="grid gap-5 items-center px-5"
         >
           <label htmlFor="name">
             <input
@@ -34,6 +34,7 @@ export default function Contacts() {
               id="mail"
               placeholder="Email"
               autoComplete="true"
+              required={true}
             />
           </label>
           <label htmlFor="subject">
@@ -61,8 +62,8 @@ export default function Contacts() {
             <button type="reset">Reset</button>
           </div>
         </form>
-        <h4 className="text-center">OR</h4>
-      </div> */}
+      </div>
+      <h4 className="text-center">OR</h4>
       <div className="flex gap-10 justify-around contacts">
         <Card
           title="Gmail"

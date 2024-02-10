@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-// import Welcome from "./Pages/Welcome.jsx";
 import AboutPage from "./Pages/About.jsx";
 import Skills from "./Pages/Skills.jsx";
 import Project from "./Pages/Project.jsx";
@@ -14,9 +13,6 @@ export default function App() {
     <>
       <div className="progress" />
       <main className="flex flex-col items-center justify-evenly gap-20">
-        {/* <div className="main">
-          <Welcome />
-        </div> */}
         <Hero />
         <AboutPage />
         <Skills />
