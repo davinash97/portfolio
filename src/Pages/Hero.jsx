@@ -14,6 +14,20 @@ export default function Hero() {
         : "dark";
     }
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      document.getElementById("scrollToTop").style.opacity =
+        window.scrollY / 100;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   function changeTheme(mode) {
     document.body.setAttribute("data-theme", mode);
   }
@@ -33,9 +47,7 @@ export default function Hero() {
   function scrollToTop() {
     window.scroll(0, 0);
   }
-  function hideButton() {
-    document.getElementById("scrollToTop").style.opacity = 0;
-  }
+
   return (
     <>
       <details
@@ -48,7 +60,10 @@ export default function Hero() {
         }}
       >
         <summary> </summary>
-        <form className="flex flex-col gap-1 items-center">
+        <form
+          className="flex flex-col gap-1 items-center"
+          style={{ backdropFilter: "blur(5px)", padding: "10px" }}
+        >
           <Radio
             value="auto"
             check={currentMode !== "light" && currentMode !== "dark"}
@@ -84,10 +99,26 @@ export default function Hero() {
       </section>
       <div
         id="scrollToTop"
-        style={{ position: "fixed", right: "5px", bottom: "0px", opacity: "1" }}
+        style={{
+          position: "fixed",
+          right: "5px",
+          bottom: "10px",
+          opacity: "0",
+          cursor: "pointer",
+          zIndex: "3",
+        }}
         onClick={scrollToTop}
       >
-        ScrollToTop
+        <img
+          src={getImageUrl("top")}
+          alt="Top Logo"
+          style={{
+            width: "40px",
+            backgroundColor: "teal",
+            borderRadius: "50%",
+            outline: "1px solid black",
+          }}
+        />
       </div>
     </>
   );

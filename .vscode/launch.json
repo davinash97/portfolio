@@ -23,7 +23,7 @@
                 "${url}",
                 "--new-window"
             ],
-            "runtimeExecutable": "/usr/bin/thorium-browser",
+            "runtimeExecutable": "/usr/bin/brave",
             "webRoot": "${workspaceFolder}"
         },
     ],
