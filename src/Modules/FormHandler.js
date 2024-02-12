@@ -1,18 +1,17 @@
-const FormHandler = async (formData) => {
-    try {
-        // Perform async operations (e.g., API calls, data processing)
-        // ...
+import formData from "form-data";
+import Mailgun from "mailgun.js";
 
-        // Log or handle the form data
-        console.log("Form data submitted:", formData);
+const mailgun = new Mailgun(formData);
 
-        // Optionally return data or perform other actions
-        return "Form submission successful";
-    } catch (error) {
-        // Handle errors
-        console.error("Form submission error:", error);
-        throw error;
-    }
-};
+const mg = mailgun.client({ username: "api", key: API_KEY });
 
-export default FormHandler;
+mg.messages
+  .create(DOMAIN, {
+    from: "Excited User <mailgun@sandbox123.mailgun.org>",
+    to: ["davinash97.work@gmail.com"],
+    subject: "Hello",
+    text: "Testing some Mailgun awesomeness!",
+    html: "<h1>Testing some Mailgun awesomeness!</h1>",
+  })
+  .then((msg) => console.log(msg)) // logs response data
+  .catch((err) => console.log(err)); // logs any error

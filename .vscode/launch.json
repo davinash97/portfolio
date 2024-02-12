@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch netlify",
+            "request": "launch",
+            "type": "node",
+            "runtimeExecutable": "netlify",
+            "runtimeArgs": [
+                "dev"
+            ]
+        },
+        {
             "name": "NPM launch",
             "request": "launch",
             "type": "node",
