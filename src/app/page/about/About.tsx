@@ -12,14 +12,14 @@ export default function About() {
 				<span>e</span>
 			</h2>
 			<p className="w-3xl text-justify edu-nsw-act-cursive-200 text-2xl">
-				I'm a Computer Science Engineer with a strong foundation in
+				I&apos;m a Computer Science Engineer with a strong foundation in
 				Electrical Engineering, combining software expertise with
 				hardware knowledge to create comprehensive solutions. My
 				interdisciplinary background allows me to bridge the gap between
 				digital innovation and physical implementation. With experience
 				in full-stack development, embedded systems, and IoT solutions,
 				I thrive on challenges that require both analytical thinking and
-				creative problem-solving. I'm passionate about emerging
+				creative problem-solving. I&apos;m passionate about emerging
 				technologies like AI, machine learning, and automation.
 			</p>
 		</section>
