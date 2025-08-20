@@ -1,8 +1,9 @@
 type SkillCardProps = {
 	skillName: string;
+	skillSet: string[];
 };
 
-export default function SkillCard({ skillName }: SkillCardProps) {
+export default function SkillCard({ skillName, skillSet }: SkillCardProps) {
 	return (
 		<>
 			<style>{`
@@ -19,12 +20,12 @@ export default function SkillCard({ skillName }: SkillCardProps) {
 					border: "2px solid black",
 					borderRadius: "10px",
 				}}>
-				<h3>{skillName}</h3>
+				<h3 className="text-xl">{skillName}</h3>
 				<div className="m-3">
 					<ol className="list-disc list-inside">
-						<li>Java</li>
-						<li>JavaScript</li>
-						<li>Python</li>
+						{skillSet.map((skills, index) => (
+							<li key={index}>{skills}</li>
+						))}
 					</ol>
 				</div>
 			</div>

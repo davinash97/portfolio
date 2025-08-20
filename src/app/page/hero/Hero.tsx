@@ -24,7 +24,7 @@ export default function Hero() {
 			/>
 
 			{/* Overlay text */}
-			<div className="relative z-10 gap-13 flex flex-col items-center justify-center w-full h-full bg-black/40 text-white">
+			<div className="relative z-10 gap-13 flex flex-col items-center justify-center w-screen h-screen bg-black/40 text-white">
 				<h1 className="text-5xl font-bold">This is Avinash</h1>
 				<h2 className="text-2xl">I am a Developer</h2>
 			</div>
