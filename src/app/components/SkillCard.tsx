@@ -7,12 +7,12 @@ export default function SkillCard({ skillName, skillSet }: SkillCardProps) {
 	return (
 		<>
 			<style>{`
-		.skillCard:hover {
-		  cursor: pointer;
-		  box-shadow: 0 0 10px black;
-		  transition: box-shadow 100ms;
-		}
-	  `}</style>
+				.skillCard:hover {
+				  cursor: pointer;
+				  box-shadow: 0 0 10px black;
+				  transition: box-shadow 100ms;
+				}
+		  `}</style>
 
 			<div
 				className="skillCard not-last:flex flex-col text-left p-5"
