@@ -8,8 +8,8 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ name, image, detail }: ProjectCardProps) {
 	return (
-		<div className="flex flex-col gap-2 w-fit">
-			<div className="relative flex flex-col h-[200] w-[300] ">
+		<div className="flex flex-col gap-2 w-fit items-center">
+			<div className="relative flex flex-col h-[200] w-[300]">
 				<Image
 					src={image || "https://dummyimage.com/600x400/000/fff"}
 					alt={`image of ${name || "dummy project"}`}
@@ -24,7 +24,7 @@ export default function ProjectCard({ name, image, detail }: ProjectCardProps) {
 					{name || "This is a dummy project name"}
 				</h2>
 			</div>
-			<div>
+			<div className="w-[400]">
 				<ol className="list-decimal list-inside flex flex-col gap-5">
 					{detail.map((project, index) => (
 						<li key={index} className="text-justify">

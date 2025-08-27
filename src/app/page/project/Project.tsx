@@ -14,7 +14,7 @@ export default function Project() {
 				<span>t</span>
 				<span>s</span>
 			</h2>
-			<div className="max-w-screen-xl grid justify-between items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+			<div className="max-w-screen-xl grid justify-between items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 p-4">
 				<ProjectCard
 					name="Global Buzz"
 					image="https://dummyimage.com/600x400/000/fff"
