@@ -73,7 +73,7 @@ export default function Hero() {
 					transition: "opacity 0.1s linear, transform 0.1s linear",
 				}}>
 				<h1
-					className={`xl:text-8xl md:text-6xl sm:text-4xl ${montserrat.className}`}>
+					className={`text-3xl md:text-6xl lg:text-6xl xl:text-8xl break-words p-6  ${montserrat.className}`}>
 					<span className="inline-block slideIn">Welcome&nbsp;</span>
 					<span className="slideIn-1">to&nbsp;</span>
 					<span className="slideIn-2">my&nbsp;</span>
@@ -82,7 +82,7 @@ export default function Hero() {
 				</h1>
 
 				<h2
-					className={`xl:text-6xl md:text-4xl sm:text-2xl ${jost.className}`}
+					className={`text-2xl md:text-3xl lg:text-3xl xl:text-6xl break-words p-6 ${jost.className}`}
 					onMouseEnter={() => setHovered(true)}
 					onMouseLeave={() => setHovered(false)}>
 					I am{" "}

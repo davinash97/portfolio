@@ -15,7 +15,7 @@ export default function Education() {
 				<span>o</span>
 				<span>n</span>
 			</h2>
-			<div className="w-fit flex flex-row justify-between gap-10">
+			<div className="flex flex-col md:flex-col lg:flex-col xl:flex-row justify-between gap-6">
 				<Card
 					title={
 						"Bachelors in Computer Science Engineering (Lateral)"

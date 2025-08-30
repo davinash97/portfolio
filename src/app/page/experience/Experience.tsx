@@ -16,7 +16,7 @@ export default function Experience() {
 				<span>c</span>
 				<span>e</span>
 			</h2>
-			<div className="max-w-screen-xl grid justify-between items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 p-4">
+			<div className="max-w-screen-xl grid justify-between items-center grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-6 p-4">
 				<Card
 					title="Catalog Associate"
 					organization="Amazon Development Center"

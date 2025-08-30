@@ -1,8 +1,8 @@
 export default function About() {
 	return (
 		<>
-			<section className="flex w-screen text-center items-center p-10 flex-col lg:flex-row justify-evenly gap-5">
-				<h2 className="w-fit flex flex-row items-center text-4xl cursor-pointer select-none">
+			<section className="flex w-screen h-[60dvh] text-center items-center p-40 flex-col lg:flex-row justify-evenly gap-5">
+				<h2 className="w-full flex flex-row justify-center items-center text-4xl cursor-pointer select-none">
 					<span>A</span>
 					<span>b</span>
 					<span>o</span>
@@ -12,7 +12,7 @@ export default function About() {
 					<span>m</span>
 					<span>e</span>
 				</h2>
-				<p className="w-3xl text-justify edu-nsw-act-cursive-200 text-2xl px-20">
+				<p className="w-full text-justify md:text-xl p-10">
 					I&apos;m a Computer Science Engineer with a strong
 					foundation in Electrical Engineering, combining software
 					expertise with hardware knowledge to create comprehensive

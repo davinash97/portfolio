@@ -20,12 +20,32 @@ export default function Contact() {
 				<span>c</span>
 				<span>h</span>
 			</h2>
-			<div className="flex flex-row h-full w-full gap-4 justify-evenly items-center">
-				<div className="flex flex-col gap-3 w-[150]">
+			<div className="flex flex-col h-full w-full gap-6 justify-center items-center">
+				<div className="grid grid-cols-2 md:grid-cols-2 gap-3 w-fit order-2">
 					<ContactCard
 						title="Email"
 						image={""}
-						content="this@mail.com"
+						content={
+							<a
+								href="mailto:this@mail.com"
+								target="_black"
+								rel="noopener noreferrer">
+								this@email
+							</a>
+						}
+					/>
+					<ContactCard
+						title="Linkedin"
+						image={""}
+						content={
+							<a
+								href="https://linkedin.com/in/davinash97"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-black hover:none">
+								davinash97@linkedin
+							</a>
+						}
 					/>
 					<ContactCard
 						title="Phone"
@@ -39,7 +59,7 @@ export default function Contact() {
 					/>
 				</div>
 				{/* <span className="line"></span> */}
-				<form className="flex flex-col h-[300] justify-around items-center gap-4">
+				<form className="flex flex-col h-[300] justify-around items-center gap-4 order-1">
 					<div className="flex flex-row gap-2">
 						<input
 							type="text"
