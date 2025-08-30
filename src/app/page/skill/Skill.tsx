@@ -13,7 +13,7 @@ export default function Skill() {
 					<span>l</span>
 					<span>s</span>
 				</h2>
-				<div className="max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-evenly gap-3">
+				<div className="max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-around gap-3">
 					<SkillCard
 						skillName="Programming Language"
 						skillSet={["Java", "JavaScript", "Python"]}
