@@ -1,7 +1,7 @@
 type ContactProps = {
 	title: string;
 	image: string;
-	content: any;
+	content: React.ReactNode;
 };
 
 import Image from "next/image";
