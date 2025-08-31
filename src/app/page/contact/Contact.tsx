@@ -4,10 +4,32 @@ import { motion } from "framer-motion";
 import ContactCard from "@/app/components/ContactCard";
 import { Lato } from "next/font/google";
 import "./Contact.css";
+import { useState } from "react";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+	e.preventDefault();
+
+	const formData = new FormData(e.currentTarget);
+	const data = Object.fromEntries(formData.entries());
+
+	const res = await fetch("/.netlify/functions/sendEmail", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(data),
+	});
+
+	if (res.ok) {
+		alert("Email sent!");
+		e.currentTarget.reset();
+	} else {
+		alert("Something went wrong.");
+	}
+};
+
 export default function Contact() {
+	const [loading, setLoading] = useState(false);
 	return (
 		<section
 			className="flex flex-col w-screen items-center justify-around px-6 py-12 gap-12"
@@ -86,6 +108,7 @@ export default function Contact() {
 				{/* Contact form */}
 				<motion.form
 					className="flex flex-col w-full gap-4 order-1 lg:order-2"
+					onSubmit={handleSubmit}
 					initial={{ opacity: 0, x: 60 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					viewport={{ amount: 0.3 }}
@@ -135,8 +158,10 @@ export default function Contact() {
 					/>
 					<button
 						type="submit"
-						className="self-end px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition">
-						Send
+						className="self-end px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition"
+						disabled={loading}>
+						{/* Send */}
+						{loading ? "Sending..." : "Send"}
 					</button>
 				</motion.form>
 			</div>
