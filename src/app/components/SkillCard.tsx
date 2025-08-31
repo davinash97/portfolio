@@ -1,34 +1,29 @@
+import { Lato } from "next/font/google";
+
 type SkillCardProps = {
 	skillName: string;
 	skillSet: string[];
+	className?: string;
 };
 
-export default function SkillCard({ skillName, skillSet }: SkillCardProps) {
-	return (
-		<>
-			<style>{`
-				.skillCard:hover {
-				  cursor: pointer;
-				  box-shadow: 0 0 10px black;
-				  transition: box-shadow 100ms;
-				}
-		  `}</style>
+const lato = Lato({ weight: "400", subsets: ["latin"] });
 
-			<div
-				className="skillCard not-last:flex flex-col text-left p-5"
-				style={{
-					border: "2px solid black",
-					borderRadius: "10px",
-				}}>
-				<h3 className="text-xl">{skillName}</h3>
-				<div className="m-3">
-					<ol className="list-disc list-inside">
-						{skillSet.map((skills, index) => (
-							<li key={index}>{skills}</li>
-						))}
-					</ol>
-				</div>
-			</div>
-		</>
+export default function SkillCard({
+	skillName,
+	skillSet,
+	className,
+}: SkillCardProps) {
+	return (
+		<article
+			className={`flex flex-col text-left p-5 border-2 border-black rounded-lg 
+						hover:shadow-2xl hover:shadow-black/40 transition duration-200 
+						cursor-pointer max-w-sm w-full h-full ${lato.className} ${className || ""}`}>
+			<h3 className="text-xl font-semibold">{skillName}</h3>
+			<ul className="mt-3 list-disc list-inside space-y-1">
+				{skillSet.map((skill, index) => (
+					<li key={index}>{skill}</li>
+				))}
+			</ul>
+		</article>
 	);
 }

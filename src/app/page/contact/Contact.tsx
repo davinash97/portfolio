@@ -1,100 +1,144 @@
+"use client";
+
+import { motion } from "framer-motion";
 import ContactCard from "@/app/components/ContactCard";
+import { Lato } from "next/font/google";
+import "./Contact.css";
+
+const lato = Lato({ weight: "400", subsets: ["latin"] });
 
 export default function Contact() {
 	return (
-		<section className="flex flex-col w-screen text-center items-center justify-around p-10 gap-10">
-			{/* Contact */}
-			<h2 className="text-4xl">
+		<section
+			className="flex flex-col w-screen items-center justify-around px-6 py-12 gap-12"
+			aria-labelledby="contact-heading">
+			{/* Heading */}
+			<motion.h2
+				id="contact-heading"
+				className="text-4xl text-center select-none"
+				initial={{ opacity: 0, y: -30 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ amount: 0.3 }}
+				transition={{ duration: 0.7, ease: "easeOut" }}>
 				<span>G</span>
 				<span>e</span>
-				<span>t </span>
-				<span>&nbsp;</span>
+				<span>t</span>&nbsp;
 				<span>i</span>
 				<span>n</span>
 				<span>t</span>
-				<span>o</span>
-				<span>&nbsp;</span>
+				<span>o</span>&nbsp;
 				<span>t</span>
 				<span>o</span>
 				<span>u</span>
 				<span>c</span>
 				<span>h</span>
-			</h2>
-			<div className="flex flex-col h-full w-full gap-6 justify-center items-center">
-				<div className="grid grid-cols-2 md:grid-cols-2 gap-3 w-fit order-2">
-					<ContactCard
-						title="Email"
-						image={""}
-						content={
-							<a
-								href="mailto:this@mail.com"
-								target="_black"
-								rel="noopener noreferrer">
-								this@email
-							</a>
-						}
-					/>
-					<ContactCard
-						title="Linkedin"
-						image={""}
-						content={
-							<a
-								href="https://linkedin.com/in/davinash97"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-black hover:none">
-								davinash97@linkedin
-							</a>
-						}
-					/>
-					<ContactCard
-						title="Phone"
-						image={""}
-						content="+91987654321"
-					/>
+			</motion.h2>
+
+			<div className="flex flex-col lg:flex-row gap-10 w-full max-w-6xl justify-center items-start">
+				{/* Contact cards */}
+				<motion.div
+					className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full order-2 lg:order-1"
+					initial={{ opacity: 0, x: -60 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ amount: 0.3 }}
+					transition={{ duration: 0.8, ease: "easeOut" }}>
+					<a
+						href="mailto:this@mail.com"
+						target="_blank"
+						rel="noopener noreferrer">
+						<ContactCard
+							title="Email"
+							image=""
+							content="this@email"
+						/>
+					</a>
+					<a
+						href="https://linkedin.com/in/davinash97"
+						target="_blank"
+						rel="noopener noreferrer">
+						<ContactCard
+							title="LinkedIn"
+							image=""
+							content="davinash97"
+						/>
+					</a>
+					<a
+						href="tel:+919876543210"
+						target="_blank"
+						rel="noopener noreferrer">
+						<ContactCard
+							title="Phone"
+							image=""
+							content="+919876543210"
+						/>
+					</a>
 					<ContactCard
 						title="Location"
-						image={""}
-						content="Bangalore, KA, India"
+						image=""
+						content={
+							<span className="no-anim">
+								Bangalore, KA, India
+							</span>
+						}
 					/>
-				</div>
-				{/* <span className="line"></span> */}
-				<form className="flex flex-col h-[300] justify-around items-center gap-4 order-1">
-					<div className="flex flex-row gap-2">
+				</motion.div>
+
+				{/* Contact form */}
+				<motion.form
+					className="flex flex-col w-full gap-4 order-1 lg:order-2"
+					initial={{ opacity: 0, x: 60 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ amount: 0.3 }}
+					transition={{
+						duration: 0.8,
+						ease: "easeOut",
+						delay: 0.2,
+					}}>
+					<div className="flex flex-col md:flex-row gap-3">
 						<input
 							type="text"
 							name="firstname"
 							id="firstname"
 							placeholder="Firstname"
+							className={`${lato.className}`}
+							required
 						/>
 						<input
 							type="text"
 							name="lastname"
 							id="lastname"
 							placeholder="Lastname"
+							className={`${lato.className}`}
 						/>
 					</div>
 					<input
 						type="email"
 						name="email"
 						id="email"
-						className="w-full"
 						placeholder="Email"
+						className={` ${lato.className}`}
+						required
 					/>
 					<input
 						type="text"
 						name="subject"
 						id="subject"
-						className="w-full"
 						placeholder="Subject"
+						className={` ${lato.className}`}
 					/>
 					<textarea
 						name="message"
 						id="message"
-						placeholder=" Message"
-						className="h-full w-full"
+						placeholder="Message"
+						className={` h-32 p-2 ${lato.className}`}
+						required
 					/>
-				</form>
+					<button
+						type="submit"
+						className="self-end px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition">
+						Send
+					</button>
+				</motion.form>
 			</div>
 		</section>
 	);

@@ -7,11 +7,6 @@
 	scroll-behavior: smooth;
 }
 
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #0a0a0a;
@@ -30,6 +25,7 @@ h3 {
 	@apply select-none;
 }
 
+/* Animated letters */
 span {
 	padding: 0 2px;
 	cursor: pointer;
@@ -41,7 +37,15 @@ span:hover {
 	color: blueviolet;
 	transform: translateY(-8px) rotate(5deg) scale(1.2);
 }
+.no-anim {
+	cursor: auto;
+	&:hover {
+		color: var(--foreground);
+		transform: translateY(0) rotate(0) scale(1);
+	}
+}
 
+/* Form elements */
 input,
 textarea {
 	border-radius: 10px;
@@ -50,14 +54,6 @@ textarea {
 }
 
 input::placeholder,
-:-ms-input-placeholder,
-::-webkit-input-placeholder,
-textarea {
+textarea::placeholder {
 	text-align: center;
-}
-
-.line {
-	/* height: 100%; */
-	width: 10px;
-	background-color: black;
 }

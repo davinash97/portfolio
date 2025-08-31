@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+input {
+	@apply p-3 border rounded-md;
+}
+
+input[type="text"] {
+	@apply flex-1;
+}
