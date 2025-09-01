@@ -4,7 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Poppins, Lato, Great_Vibes } from "next/font/google";
 
-const nameArr = ["Avinash", "a Software Engineer"];
+const nameArr = [
+	"Avinash",
+	"a Software Engineer",
+	"an Electrical Engineer",
+	"a Tech enthusiast",
+];
 
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 const lato = Lato({ weight: "400", subsets: ["latin"] });

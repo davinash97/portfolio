@@ -8,28 +8,35 @@ import { useState } from "react";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-	e.preventDefault();
-
-	const formData = new FormData(e.currentTarget);
-	const data = Object.fromEntries(formData.entries());
-
-	const res = await fetch("/.netlify/functions/sendEmail", {
-		method: "POST",
-		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify(data),
-	});
-
-	if (res.ok) {
-		alert("Email sent!");
-		e.currentTarget.reset();
-	} else {
-		alert("Something went wrong.");
-	}
-};
-
 export default function Contact() {
 	const [loading, setLoading] = useState(false);
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setLoading(true);
+
+		// Store reference BEFORE await!
+		const form = e.currentTarget;
+
+		const formData = new FormData(form);
+		const data = Object.fromEntries(formData.entries());
+
+		const res = await fetch("/.netlify/functions/sendMail", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+
+		setLoading(false);
+
+		if (res.ok) {
+			alert("Email sent!");
+			form.reset(); // Use the reference, not e.currentTarget!
+		} else {
+			alert("Something went wrong.");
+		}
+	};
 	return (
 		<section
 			className="flex flex-col w-screen items-center justify-around px-6 py-12 gap-12"
