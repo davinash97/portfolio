@@ -1,5 +1,7 @@
 import { Lato } from "next/font/google";
 import React from "react";
+import { IconType } from "react-icons";
+import { IoIosLink } from "react-icons/io";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
@@ -9,6 +11,8 @@ type Props = {
 	duration: string;
 	detail: React.ReactNode;
 	className?: string;
+	link?: string; // The URL
+	linkIcon?: IconType; // Icon component
 };
 
 export default React.memo(function Card({
@@ -17,21 +21,38 @@ export default React.memo(function Card({
 	duration,
 	detail,
 	className,
+	link,
+	linkIcon: LinkIcon = IoIosLink, // Default icon
 }: Props) {
 	return (
 		<article
-			className={`max-w-md flex flex-col gap-4 p-4 rounded-lg border border-gray-200 shadow-sm bg-white ${
+			className={`max-w-md h-full justify-between flex flex-col gap-4 p-4 rounded-lg border border-gray-200 shadow-sm bg-white ${
 				className || ""
 			}`}>
-			<h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+			<h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+
 			<div className="flex justify-between text-sm text-gray-600">
 				<span className="no-anim">{organization}</span>
 				<time>{duration}</time>
 			</div>
+
 			<p
 				className={`text-gray-700 leading-relaxed text-justify ${lato.className}`}>
-				{detail}
+				{detail ||
+					`Lorem Ipsum is simply dummy text of the printing and typesetting industry...`}
 			</p>
+
+			<div className="text-right">
+				{link && (
+					<a
+						href={link}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={`text-blue-500 inline-flex items-center ${lato.className}`}>
+						<LinkIcon className="mr-1" /> Visit
+					</a>
+				)}
+			</div>
 		</article>
 	);
 });

@@ -4,6 +4,11 @@ input {
 	@apply p-3 border rounded-md;
 }
 
+input,
+textarea {
+	@apply focus:outline-1;
+}
+
 input[type="text"] {
 	@apply flex-1;
 }

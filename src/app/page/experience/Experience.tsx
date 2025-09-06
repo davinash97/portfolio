@@ -22,20 +22,39 @@ const cardVariants: Variants = {
 };
 
 export default function Experience() {
+	const title = "Experience";
+	const content = [
+		{
+			title: "Catalog Associate",
+			organization: "Amazon Development Center",
+			duration: "Jan 2025 - Present",
+			detail: `Currently working at Amazon as a Catalog Associate, specializing in Product Knowledge Classification.
+					In my role, I have classified thousands of products accurately according to Standard Operating Procedures (SOPs),
+					maintaining a consistent reliability score of 100%. I collaborate closely with cross-functional teams to ensure
+					product data quality and correctness, helping improve catalog accuracy and customer experience. Additionally,
+					streamline classification workflows by identifying process improvements, contributing to higher efficiency and
+					faster turnaround times in product onboarding.`,
+		},
+		{
+			title: "Web Developer Intern",
+			organization: "Rungta Infotech Pvt Ltd",
+			duration: "Feb 2024 - Apr 2024",
+			detail: `Worked as a Web Development Intern at Rungta Infotech PVT LTD, where I gained hands-on experience in building
+					and maintaining web applications. Throughout my internship, I learned and worked with key web development technologies
+					including PHP, HTML, CSS, JavaScript, and SQL. I contributed to developing responsive web pages, implementing dynamic
+					features, and managing database interactions, while following best practices for clean code and efficient performance.
+					This experience strengthened my problem-solving skills and understanding of full-stack web development in a real-world environment.`,
+		},
+	];
 	return (
 		<section className="flex flex-col w-screen text-center items-center p-10 gap-10">
 			<AnimatedSection>
-				<h2 className="text-4xl">
-					<span>E</span>
-					<span>x</span>
-					<span>p</span>
-					<span>e</span>
-					<span>r</span>
-					<span>i</span>
-					<span>e</span>
-					<span>n</span>
-					<span>c</span>
-					<span>e</span>
+				<h2>
+					{Array.from(title, (char, index) => (
+						<span key={index} className="heading">
+							{char}
+						</span>
+					))}
 				</h2>
 			</AnimatedSection>
 
@@ -48,37 +67,14 @@ export default function Experience() {
 					whileInView="visible"
 					exit="exit"
 					viewport={{ once: false, amount: 0.3 }}>
-					<motion.div
-						variants={cardVariants}
-						className="w-full flex justify-center">
-						<Card
-							title="Catalog Associate"
-							organization="Amazon Development Center"
-							duration="Jan 2025 - Present"
-							detail={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-				when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-				It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-				and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-						/>
-					</motion.div>
-
-					<motion.div
-						variants={cardVariants}
-						className="w-full flex justify-center">
-						<Card
-							title="Web Developer Intern"
-							organization="Rungta Infotech Pvt Ltd"
-							duration="Feb 2024 - Apr 2024"
-							detail={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-				when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-				It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-				and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-						/>
-					</motion.div>
+					{content.map((value, index) => (
+						<motion.div
+							key={index}
+							variants={cardVariants}
+							className="w-full flex justify-center">
+							<Card {...value} />
+						</motion.div>
+					))}
 				</motion.div>
 			</AnimatedSection>
 		</section>

@@ -4,7 +4,7 @@
 	scroll-behavior: smooth;
 }
 
-html,
+/* html, */
 body {
 	overflow-x: hidden;
 }
@@ -32,25 +32,21 @@ h3 {
 	@apply select-none;
 }
 
+h2 {
+	@apply text-4xl text-center;
+}
+
 /* Animated letters */
-span {
-	padding: 0 2px;
+.heading {
+	white-space: pre;
 	cursor: pointer;
 	display: inline-block;
 	transition: transform 0.3s ease, color 0.3s ease;
 }
 
-span:hover {
+.heading:hover {
 	color: blueviolet;
 	transform: translateY(-8px) rotate(5deg) scale(1.2);
-}
-
-.no-anim {
-	cursor: auto;
-	&:hover {
-		color: var(--foreground);
-		transform: translateY(0) rotate(0) scale(1);
-	}
 }
 
 /* Form elements */

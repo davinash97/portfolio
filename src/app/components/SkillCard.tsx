@@ -15,7 +15,7 @@ export default function SkillCard({
 }: SkillCardProps) {
 	return (
 		<article
-			className={`flex flex-col text-left p-5 border-2 border-black rounded-lg 
+			className={`flex flex-col text-left p-10 border-2 border-black rounded-lg 
 						hover:shadow-2xl hover:shadow-black/40 transition duration-200 
 						cursor-pointer max-w-sm w-full h-full ${lato.className} ${className || ""}`}>
 			<h3 className="text-xl font-semibold">{skillName}</h3>

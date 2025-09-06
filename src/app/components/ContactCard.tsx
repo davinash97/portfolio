@@ -1,26 +1,24 @@
-type ContactProps = {
-	title: string;
-	image: string;
-	content: React.ReactNode;
-};
-
-import Image from "next/image";
 import { Lato } from "next/font/google";
+import { IconType } from "react-icons";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
-export default function ContactCard({ title, image, content }: ContactProps) {
+type ContactProps = {
+	title: string;
+	image: IconType;
+	content: React.ReactNode;
+};
+
+export default function ContactCard({
+	title,
+	image: Icon,
+	content,
+}: ContactProps) {
 	return (
 		<div className="flex flex-row w-full gap-4 rounded-xl p-4 border-2 border-solid border-red-200 items-center">
-			{/* Image */}
-			<div className="relative h-[80px] w-[80px] flex-shrink-0">
-				<Image
-					src={image || "https://dummyimage.com/600x400/000/fff"}
-					alt={title}
-					fill
-					loading="lazy"
-					className="rounded-lg object-cover"
-				/>
+			{/* Icon */}
+			<div className="h-[80px] w-[80px] flex items-center justify-center text-4xl text-red-500">
+				<Icon />
 			</div>
 
 			{/* Content */}

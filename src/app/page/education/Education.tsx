@@ -22,19 +22,40 @@ const cardVariants: Variants = {
 };
 
 export default function Education() {
+	const title = "Education";
+	const content = [
+		{
+			title: "Diploma in Electrical Engineering (Lateral)",
+			organization: "Rungta College of Engineering & Technology",
+			duration: "2017-2019",
+			detail: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+								and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+		},
+		{
+			title: "Bachelors in Computer Science Engineering (Lateral)",
+			organization: "Rungta College of Engineering & Technology",
+			duration: "2021-2024",
+			detail: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+								and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+		},
+	];
 	return (
 		<section className="flex flex-col w-screen text-center items-center p-10 gap-10">
 			<AnimatedSection>
-				<h2 className="text-4xl">
-					<span>E</span>
-					<span>d</span>
-					<span>u</span>
-					<span>c</span>
-					<span>a</span>
-					<span>t</span>
-					<span>i</span>
-					<span>o</span>
-					<span>n</span>
+				<h2>
+					{Array.from(title, (char, index) => (
+						<span key={index} className="heading">
+							{char}
+						</span>
+					))}
 				</h2>
 			</AnimatedSection>
 
@@ -46,33 +67,11 @@ export default function Education() {
 					whileInView="visible"
 					exit="hidden"
 					viewport={{ once: false, amount: 0.3 }}>
-					<motion.div variants={cardVariants}>
-						<Card
-							title="Bachelors in Computer Science Engineering (Lateral)"
-							organization="Rungta College of Engineering & Technology"
-							duration="2021-2024"
-							detail={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-								when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-								It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-								It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-								and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-						/>
-					</motion.div>
-
-					<motion.div variants={cardVariants}>
-						<Card
-							title="Diploma in Electrical Engineering (Lateral)"
-							organization="Rungta College of Engineering & Technology"
-							duration="2018-2021"
-							detail={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-								Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-								when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-								It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-								It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-								and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
-						/>
-					</motion.div>
+					{content.map((value, index) => (
+						<motion.div key={index} variants={cardVariants}>
+							<Card {...value} />
+						</motion.div>
+					))}
 				</motion.div>
 			</AnimatedSection>
 		</section>

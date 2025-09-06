@@ -21,19 +21,51 @@ const cardVariants: Variants = {
 };
 
 export default function Project() {
+	const title = "Project";
+	const content = [
+		{
+			name: "Global Buzz",
+			image: "https://dummyimage.com/600x400/000/fff",
+			details: `GlobalBuzz is a dynamic news web application built with Next.js, Tailwind CSS, and
+					integrated with NewsAPI to fetch real-time news articles from various sources.
+					The platform provides users with the latest news across multiple categories in
+					a fast, responsive, and modern interface.`,
+			points: [
+				"Real-time news updates powered by NewsAPI.",
+				"Clean, responsive UI built using Tailwind CSS.",
+				"Server-side rendering and optimized performance with Next.js.",
+				"Dynamic routing to browse news by categories.",
+				"Deployed on Netlify for fast and reliable access.",
+			],
+			link: "https://global-buzz.netlify.app",
+			techStack: ["Next.js", "TailwindCSS"],
+		},
+		{
+			name: "Password Generator",
+			image: "https://dummyimage.com/600x400/000/fff",
+			details: `Pass-Gen is a lightweight, browser-based password generator built using pure HTML, CSS, and Vanilla JavaScript.
+									It provides users with the ability to generate strong random passwords instantly without relying on any external frameworks or libraries.`,
+			points: [
+				"Generates secure, random passwords with configurable options.",
+				"Simple, intuitive user interface for ease of use.",
+				"Copy-to-clipboard functionality for quick password usage.",
+				"Fully responsive design, works seamlessly across devices.",
+				"Lightweight codebase ensuring fast load times and performance.",
+			],
+			link: "https://davinash97.github.io/pass-gen",
+			techStack: ["HTML", "CSS", "JavaScript"],
+		},
+	];
 	return (
 		<section className="w-screen flex flex-col items-center justify-center gap-5 p-10">
 			{/* Animated Heading */}
 			<AnimatedSection>
 				<h2 className="text-4xl">
-					<span>P</span>
-					<span>r</span>
-					<span>o</span>
-					<span>j</span>
-					<span>e</span>
-					<span>c</span>
-					<span>t</span>
-					<span>s</span>
+					{Array.from(title, (char, index) => (
+						<span key={index} className="heading">
+							{char}
+						</span>
+					))}
 				</h2>
 			</AnimatedSection>
 
@@ -46,29 +78,11 @@ export default function Project() {
 					whileInView="visible"
 					exit="exit"
 					viewport={{ once: false, amount: 0.3 }}>
-					<motion.div variants={cardVariants}>
-						<ProjectCard
-							name="Global Buzz"
-							image="https://dummyimage.com/600x400/000/fff"
-							detail={[
-								"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-								"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-								"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-							]}
-						/>
-					</motion.div>
-
-					<motion.div variants={cardVariants}>
-						<ProjectCard
-							name="Password Generator"
-							image="https://dummyimage.com/600x400/000/fff"
-							detail={[
-								"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-								"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-								"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-							]}
-						/>
-					</motion.div>
+					{content.map((value, index) => (
+						<motion.div key={index} variants={cardVariants}>
+							<ProjectCard {...value} />
+						</motion.div>
+					))}
 				</motion.div>
 			</AnimatedSection>
 		</section>

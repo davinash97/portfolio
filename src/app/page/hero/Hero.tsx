@@ -62,20 +62,20 @@ export default function Hero() {
 	};
 
 	return (
-		<section className="relative h-screen w-screen overflow-hidden m-0 p-0">
-			{/* Background SVG */}
+		<section className="relative h-screen w-screen m-0 p-0">
 			{/* GPU-friendly animated gradient background */}
 			<motion.div
 				className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 animate-gradient-x"
 				style={{
 					opacity,
+					transform: `translateY(${translateY}px)`,
 				}}
 				animate="true"
 			/>
 
 			{/* Overlay */}
 			<motion.div
-				className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black/60 text-white text-center"
+				className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black/30 text-white text-center"
 				style={{
 					opacity,
 					transform: `translateY(${translateY}px)`,
@@ -84,23 +84,21 @@ export default function Hero() {
 				{/* Heading with stagger */}
 				<motion.h1
 					className={`text-3xl md:text-6xl lg:text-6xl xl:text-8xl break-words p-6 ${poppins.className}`}>
-					{"Welcome to my Portfolio Website"
-						.split(" ")
-						.map((word, i) => (
-							<motion.span
-								key={i}
-								custom={i}
-								variants={headingVariants}
-								initial="hidden"
-								animate="visible"
-								className="inline-block mr-2">
-								{word}
-							</motion.span>
-						))}
+					{"Welcome to my Portfolio".split(" ").map((word, i) => (
+						<motion.span
+							key={i}
+							custom={i}
+							variants={headingVariants}
+							initial="hidden"
+							animate="visible"
+							className="inline-block mr-2 heading">
+							{word}
+						</motion.span>
+					))}
 				</motion.h1>
 
 				{/* Subheading */}
-				<motion.h2
+				<motion.h3
 					className={`text-2xl md:text-3xl lg:text-3xl xl:text-6xl break-words p-6 ${lato.className}`}
 					onMouseEnter={() => setHovered(true)}
 					onMouseLeave={() => setHovered(false)}>
@@ -113,7 +111,7 @@ export default function Hero() {
 						className={`${greatVibes.className} inline-block animate-bounce hover:[animation-play-state:paused] cursor-auto text-purple-500`}>
 						{name}
 					</motion.span>
-				</motion.h2>
+				</motion.h3>
 
 				{/* Scroll indicator */}
 				<motion.div

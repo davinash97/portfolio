@@ -11,6 +11,8 @@ import Project from "./page/project/Project";
 import Experience from "./page/experience/Experience";
 import Education from "./page/education/Education";
 import Contact from "./page/contact/Contact";
+import Achievement from "./page/achievements/Achievement";
+import Other from "./page/other/Other";
 
 export default function Home() {
 	const [loading, setLoading] = useState(true);
@@ -32,6 +34,8 @@ export default function Home() {
 					<Project />
 					<Experience />
 					<Education />
+					<Achievement />
+					<Other />
 					<Contact />
 				</main>
 			</Suspense>
