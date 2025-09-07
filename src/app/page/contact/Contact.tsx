@@ -73,13 +73,13 @@ export default function Contact() {
 						viewport={{ amount: 0.3 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}>
 						<a
-							href="mailto:davinash97.work@gmail.com"
+							href={`mailto:${process.env.SMTP_TO}`}
 							target="_blank"
 							rel="noopener noreferrer">
 							<ContactCard
 								title="Email"
 								image={BiLogoGmail}
-								content="davinash97.work@gmail.com"
+								content={`${process.env.SMTP_TO}`}
 							/>
 						</a>
 						<a
@@ -167,7 +167,7 @@ export default function Contact() {
 							/>
 							<button
 								type="submit"
-								className="self-end px-6 py-2 bg-[var(--accent)]] text-white rounded-md hover:bg-gray-800 transition"
+								className="self-end px-6 py-2 bg-[var(--accent)]] text-white rounded-md bg-purple-500 hover:bg-gray-800 hover:cursor-pointer"
 								disabled={loading}>
 								{/* Send */}
 								{loading ? "Sending..." : "Send"}
