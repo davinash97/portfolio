@@ -25,7 +25,7 @@ export default function Project() {
 	const content = [
 		{
 			name: "Global Buzz",
-			image: "https://dummyimage.com/600x400/000/fff",
+			image: "/assets/global-buzz.jpg",
 			details: `GlobalBuzz is a dynamic news web application built with Next.js, Tailwind CSS, and
 					integrated with NewsAPI to fetch real-time news articles from various sources.
 					The platform provides users with the latest news across multiple categories in
@@ -42,7 +42,7 @@ export default function Project() {
 		},
 		{
 			name: "Password Generator",
-			image: "https://dummyimage.com/600x400/000/fff",
+			image: "/assets/pass-gen.jpg",
 			details: `Pass-Gen is a lightweight, browser-based password generator built using pure HTML, CSS, and Vanilla JavaScript.
 									It provides users with the ability to generate strong random passwords instantly without relying on any external frameworks or libraries.`,
 			points: [

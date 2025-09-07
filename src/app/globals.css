@@ -4,20 +4,17 @@
 	scroll-behavior: smooth;
 }
 
-/* html, */
-body {
-	overflow-x: hidden;
-}
-
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	/* --background: #ffffff; */
+	/* --foreground: #171717; */
+	@apply bg-gray-200 text-black;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
+		@apply bg-gray-900 text-gray-200;
+		/* --background: #0a0a0a; */
+		/* --foreground: #ededed; */
 	}
 }
 

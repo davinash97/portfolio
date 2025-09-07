@@ -8,7 +8,6 @@ import { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import AnimatedSection from "@/app/components/AnimatedSection";
 import { PiTelegramLogo } from "react-icons/pi";
-import { FaLinkedinIn } from "react-icons/fa";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { BiLogoGmail } from "react-icons/bi";
 
@@ -39,14 +38,14 @@ export default function Contact() {
 
 		if (res.ok) {
 			alert("Email sent!");
-			form.reset(); // Use the reference, not e.currentTarget!
+			form.reset();
 		} else {
 			alert("Something went wrong.");
 		}
 	};
 	return (
 		<section
-			className="flex flex-col w-screen items-center justify-around px-6 py-12 gap-12"
+			className="flex flex-col w-screen items-center justify-around gap-12 py-4"
 			aria-labelledby="contact-heading">
 			{/* Heading */}
 			<AnimatedSection>
@@ -65,7 +64,7 @@ export default function Contact() {
 			</AnimatedSection>
 
 			<AnimatedSection>
-				<div className="flex flex-col lg:flex-row gap-10 w-full max-w-6xl justify-center items-start">
+				<div className="flex flex-col w-full lg:flex-row gap-10 justify-center items-center">
 					{/* Contact cards */}
 					<motion.div
 						className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full order-2 lg:order-1"
@@ -74,13 +73,13 @@ export default function Contact() {
 						viewport={{ amount: 0.3 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}>
 						<a
-							href="mailto:this@mail.com?subject=Contacting%20from%20portfolio"
+							href="mailto:davinash97.work@gmail.com"
 							target="_blank"
 							rel="noopener noreferrer">
 							<ContactCard
 								title="Email"
 								image={BiLogoGmail}
-								content="this@email"
+								content="davinash97.work@gmail.com"
 							/>
 						</a>
 						<a
@@ -116,7 +115,7 @@ export default function Contact() {
 					<AnimatedSection>
 						{/* Contact form */}
 						<motion.form
-							className="flex flex-col w-full gap-4 order-1 lg:order-2"
+							className="flex flex-col max-w-full p-0 gap-4 order-1 lg:order-2"
 							onSubmit={handleSubmit}
 							initial={{ opacity: 0, x: 60 }}
 							whileInView={{ opacity: 1, x: 0 }}
@@ -126,13 +125,13 @@ export default function Contact() {
 								ease: "easeOut",
 								delay: 0.2,
 							}}>
-							<div className="flex flex-col md:flex-row gap-3">
+							<div className="flex flex-col md:flex-row gap-3 w-full min-w-0">
 								<input
 									type="text"
 									name="firstname"
 									id="firstname"
 									placeholder="Firstname"
-									className={`${lato.className}`}
+									className={`flex-1 min-w-0 ${lato.className} p-2 border rounded`}
 									required
 								/>
 								<input
@@ -140,9 +139,10 @@ export default function Contact() {
 									name="lastname"
 									id="lastname"
 									placeholder="Lastname"
-									className={`${lato.className}`}
+									className={`flex-1 min-w-0 ${lato.className} p-2 border rounded`}
 								/>
 							</div>
+
 							<input
 								type="email"
 								name="email"
@@ -167,7 +167,7 @@ export default function Contact() {
 							/>
 							<button
 								type="submit"
-								className="self-end px-6 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition"
+								className="self-end px-6 py-2 bg-[var(--accent)]] text-white rounded-md hover:bg-gray-800 transition"
 								disabled={loading}>
 								{/* Send */}
 								{loading ? "Sending..." : "Send"}

@@ -21,11 +21,12 @@ const cardVariants: Variants = {
 };
 
 export default function Achievement() {
-	const title = "Achievements & Certifications";
+	const title = "Achievements";
 	return (
 		<section className="flex flex-col p-10 gap-10 justify-center items-center">
 			<AnimatedSection>
 				<motion.h2
+					className="wrap-break-word text-wrap"
 					initial={{ opacity: 0, y: -10 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: -10 }}
