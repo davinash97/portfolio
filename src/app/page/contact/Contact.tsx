@@ -15,6 +15,7 @@ const lato = Lato({ weight: "400", subsets: ["latin"] });
 
 export default function Contact() {
 	const title = "Get into Touch";
+	const EMAIL = "davinash97.work@gmail.com";
 	const [loading, setLoading] = useState(false);
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -73,13 +74,13 @@ export default function Contact() {
 						viewport={{ amount: 0.3 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}>
 						<a
-							href={`mailto:${process.env.SMTP_TO}`}
+							href={`mailto:${EMAIL}`}
 							target="_blank"
 							rel="noopener noreferrer">
 							<ContactCard
 								title="Email"
 								image={BiLogoGmail}
-								content={`${process.env.SMTP_TO}`}
+								content={`${EMAIL}`}
 							/>
 						</a>
 						<a
