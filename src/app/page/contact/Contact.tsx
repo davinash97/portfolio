@@ -9,13 +9,12 @@ import { CiLocationOn } from "react-icons/ci";
 import AnimatedSection from "@/app/components/AnimatedSection";
 import { PiTelegramLogo } from "react-icons/pi";
 import { SlSocialLinkedin } from "react-icons/sl";
-import { BiLogoGmail } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa6";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
 export default function Contact() {
 	const title = "Get into Touch";
-	const EMAIL = "davinash97.work@gmail.com";
 	const [loading, setLoading] = useState(false);
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -73,14 +72,24 @@ export default function Contact() {
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ amount: 0.3 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}>
-						<a
+						{/* <a
 							href={`mailto:${EMAIL}`}
 							target="_blank"
 							rel="noopener noreferrer">
 							<ContactCard
 								title="Email"
 								image={BiLogoGmail}
-								content={`${EMAIL}`}
+								content={process.env.MY_EMAIL}
+							/>
+						</a> */}
+						<a
+							href="https://github.com/davinash97"
+							target="_blank"
+							rel="noopener noreferrer">
+							<ContactCard
+								title="Github"
+								image={FaGithub}
+								content="davinash97"
 							/>
 						</a>
 						<a
